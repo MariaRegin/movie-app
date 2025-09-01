@@ -1,0 +1,32 @@
+@model MvcMovie.Models.Movie
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<div class="container py-5 d-flex justify-content-center">
+    <div class="card shadow-none rounded-4 p-4" style="max-width: 600px; width: 100%;">
+        <h1 class="display-5 fw-bold mb-3 text-danger">Delete Confirmation</h1>
+        <p class="fs-5 mb-4">Are you sure you want to delete this movie?</p>
+        <dl class="row mb-4">
+            <dt class="col-sm-4 fw-semibold">Title</dt>
+            <dd class="col-sm-8">@Model.Title</dd>
+            <dt class="col-sm-4 fw-semibold">Genre</dt>
+            <dd class="col-sm-8">@Model.Genre</dd>
+            <dt class="col-sm-4 fw-semibold">Rating</dt>
+            <dd class="col-sm-8">@Model.Rating</dd>
+            <dt class="col-sm-4 fw-semibold">Release Date</dt>
+            <dd class="col-sm-8">@Model.ReleaseDate.ToString("MMMM dd, yyyy", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))</dd>
+            <dt class="col-sm-4 fw-semibold">Price</dt>
+            <dd class="col-sm-8">@Model.Price.ToString("C")</dd>
+        </dl>
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <div class="d-flex gap-3 flex-wrap">
+                <input type="submit" value="Delete" class="btn btn-danger btn-lg flex-fill" />
+                <a asp-action="Index" class="btn btn-secondary btn-lg flex-fill">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+

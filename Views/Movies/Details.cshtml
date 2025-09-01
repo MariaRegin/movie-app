@@ -1,0 +1,47 @@
+@model MvcMovie.Models.Movie
+
+@{
+    ViewData["Title"] = "Details";
+    var placeholderImage = Url.Content("~/images/posters/placeholder.jpg");
+}
+
+<div class="container py-5 d-flex justify-content-center">
+    <div class="card shadow-none rounded-2 p-2" style="max-width: 800px; width: 100%;">
+        <div class="row g-0">
+            <div class="col-md-4 d-flex align-items-center justify-content-center bg-dark rounded-start">
+                <img src="@placeholderImage" alt="Movie poster" class="img-fluid rounded-3 p-3" style="max-height: 300px;" />
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h2 class="card-title fw-bold mb-4">@Model.Title</h2>
+                    <div class="mb-3">
+                        <span class="badge bg-dark me-2 py-2 px-3 fs-6">
+                           @Model.Genre
+                        </span>
+                        <span class="badge bg-danger me-2 py-2 px-3 fs-6">
+                           </i>@Model.Rating
+                        </span>
+                        <span class="badge bg-secondary py-2 px-3 fs-6">
+                           @Model.ReleaseDate.ToString("MMMM dd, yyyy", System.Globalization.CultureInfo.CreateSpecificCulture("en-US"))
+                        </span>
+                    </div>
+                    <p class="fs-5 mb-4">
+                        Price: <strong>@Model.Price.ToString("C")</strong>
+                    </p>
+                    <p class="text-muted mb-5">
+                       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <div class="d-flex gap-2 flex-wrap">
+                        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-dark btn-lg" style="flex: 1 1 0;">
+                           Edit
+                        </a>
+                        <a asp-action="Index" class="btn btn-outline-secondary btn-lg" style="flex: 1 1 0;">
+                            Back to List
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

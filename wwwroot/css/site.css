@@ -1,0 +1,268 @@
+:root {
+  --main-font: "Roboto", sans-serif;
+}
+
+body {
+  font-family: var(--main-font);
+  margin-bottom: 60px;
+}
+
+html {
+  font-size: 14px;
+  position: relative;
+  min-height: 100%;
+}
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus,
+.form-select:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #abaaaa;
+}
+
+.btn-dark,
+.btn-primary,
+.btn-success,
+.btn-secondary,
+.btn-danger {
+  transition: background-color 0.4s ease, color 0.4s ease, transform 0.4s ease;
+}
+
+.adaptive-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.adaptive-buttons .btn {
+  flex: 1 1 100px;
+  min-width: 35px;
+  text-align: center;
+}
+
+.filter-buttons {
+  gap: 0.5rem;
+}
+
+.filter-buttons button {
+  flex-grow: 1;
+  min-width: 130px;
+}
+
+form.bg-light {
+  border-radius: 0.5rem;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder,
+.form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+form span.text-danger {
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+form input.form-control,
+form select.form-select,
+form label.form-label {
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+form .form-control,
+form .form-select {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.navbar {
+  background-color: #fff !important;
+  border: 1px solid rgba(91, 90, 90, 0.1);
+  padding: 1rem 1.5rem;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+.navbar-nav .nav-link {
+  color: #4a4a4a;
+  font-weight: 500;
+  padding: 0 0.75rem;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: #48a147 !important;
+}
+
+.container > main {
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+footer a.text-muted:hover,
+footer a.text-muted:focus {
+  text-decoration: underline !important;
+  cursor: pointer;
+}
+
+.table td.price-cell {
+  white-space: nowrap;
+}
+
+.table thead th {
+  border-bottom-width: 0 !important;
+}
+
+.table td,
+.table th {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.table-responsive {
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+@keyframes pulse-scale {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.75;
+  }
+}
+
+.animated-icon {
+  animation: pulse-scale 6s ease-in-out infinite;
+  display: inline-block;
+}
+
+.col-md-4:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+.block-hover {
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.block-hover:hover {
+  transform: translateY(-8px);
+  cursor: default;
+}
+
+.bg-light {
+  background: linear-gradient(135deg, #f8f9fa 0%, #eef1f4 100%);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.card {
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.card:hover {
+  background-color: #f3f2f2;
+  box-shadow: none;
+}
+
+@media (max-width: 768px) {
+  select.form-select {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.3rem;
+  }
+
+  .filter-buttons {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+  }
+
+  .filter-buttons button {
+    width: 100% !important;
+    flex-grow: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .flatpickr-calendar {
+    font-size: 0.8rem;
+  }
+
+  .flatpickr-months {
+    height: 2.5rem;
+  }
+
+  .flatpickr-weekdays {
+    height: 1.5rem;
+  }
+
+  .flatpickr-day {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 0.8rem;
+  }
+
+  .form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .form-buttons .btn {
+    flex: 1 1 auto;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  form .col-auto,
+  form .col {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+  .table td,
+  .table th {
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .table td,
+  .table th {
+    font-size: 12px;
+  }
+
+  .badge {
+    margin-bottom: 5px;
+  }
+}
