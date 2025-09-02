@@ -36,5 +36,5 @@ ASP.NET Core MVC web application for managing a movie collection. Responsive and
 
 To start the application locally, run the following command in the project directory:
 
-  dotnet watch run
+```dotnet watch run```
 
