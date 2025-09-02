@@ -1,6 +1,6 @@
 # Movie App
 
-A lightweight ASP.NET Core MVC web application for managing a movie collection. Responsive and works across multiple devices and modern browsers.
+ASP.NET Core MVC web application for managing a movie collection. Responsive and works across multiple devices and modern browsers.
 
 ## Features
 
@@ -36,5 +36,5 @@ A lightweight ASP.NET Core MVC web application for managing a movie collection. 
 
 To start the application locally, run the following command in the project directory:
 
-dotnet watch run
+  dotnet watch run
 
