@@ -31,3 +31,10 @@ A lightweight ASP.NET Core MVC web application for managing a movie collection. 
 - Responsive design for mobile, tablet, and desktop
 
 - Compatible with all modern browsers.
+
+## How to run
+
+To start the application locally, run the following command in the project directory:
+
+dotnet watch run
+
